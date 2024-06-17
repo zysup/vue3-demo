@@ -7,6 +7,7 @@
   // "editor.codeActionsOnSave": {
   //   "source.fixAll.stylelint": "explicit"
   // },
+  "eslint.validate": ["javascript", "javascriptreact", "vue"],
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -30,5 +31,5 @@
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  }
 }
