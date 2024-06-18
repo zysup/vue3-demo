@@ -12,9 +12,13 @@ const count = ref(0)
 
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
+    <p class="bg-blue-500 pt-8 text-base font-semibold leading-7 text-red-400">
       Edit
-      <code>components/HelloWorld.vue</code> to test "HMR"
+      <code
+        class="my-code bg-green-700 px-4 py-1 pt-8 text-base font-semibold leading-7 text-red-400 hover:bg-sky-800 sm:px-8 sm:py-3"
+        >compon ents/HelloWorld.vue</code
+      >
+      to test "HMR"
     </p>
   </div>
 
@@ -34,5 +38,8 @@ const count = ref(0)
 <style scoped>
 .read-the-docs {
   color: #888;
+}
+.my-code {
+  @apply bg-red-500 !important;
 }
 </style>

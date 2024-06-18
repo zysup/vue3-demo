@@ -31,5 +31,10 @@
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "search.exclude": {
+    "**/*.svg": true,
+    "**/dist": true,
+    "**/public": true
   }
 }
