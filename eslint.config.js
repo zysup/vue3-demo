@@ -24,5 +24,6 @@ export default [
       // eslint-plugin-vue (https://eslint.vuejs.org/rules/)
       'vue/multi-word-component-names': 'off', // 要求组件名称始终为 “-” 链接的单词
     },
+    extends: ['./.eslintrc-auto-import.json'],
   },
 ]

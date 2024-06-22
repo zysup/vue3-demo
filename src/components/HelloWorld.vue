@@ -1,17 +1,8 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps({
-  msg: String,
-})
-const count = ref(0)
-</script>
-
 <template>
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <button type="button" @click="count++">count is {{ count }}==={{ double }}</button>
     <p class="bg-blue-500 text-red-400 tw-pt-8 bg-clip-text text-base font-semibold leading-7">Edit</p>
     <code
       class="my-code bg-green-700 text-red-400 hover:bg-sky-800 px-20 py-px text-base font-semibold leading-7 sm:px-8 sm:py-3"
@@ -42,12 +33,30 @@ const count = ref(0)
   <p class="tw-bg-sky-500 hover:bg-sky-700 bg-purple landscape:hidden">asdf</p>
   <p class="border-r-purple text-abc-1 text-current empty:border"></p>
   <input class="hover:border-black hover:bg-black focus:border-white focus:bg-white" />
-  <van-button type="primary">主要按钮</van-button>
+  <van-button type="primary" @click="handleClick">主要按钮</van-button>
+  <!-- <button @click="handleClick">按钮</button> -->
   <van-cell-group>
     <van-cell title="单元格" value="内容" />
     <van-cell title="单元格" value="内容" label="描述信息" />
   </van-cell-group>
 </template>
+
+<script setup lang="ts">
+// import { ref } from 'vue'
+// import { showToast, showDialog } from 'vant'
+
+defineProps({
+  msg: String,
+})
+const count = ref(0)
+
+const aaa = aaa()
+
+const double = computed(() => count.value * 2)
+function handleClick() {
+  showToast('No need to import showToast')
+}
+</script>
 
 <style scoped lang="scss">
 .read-the-docs {

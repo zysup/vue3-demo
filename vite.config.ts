@@ -10,6 +10,10 @@ export default defineConfig({
     vue(),
     AutoImport({
       imports: ['vue', 'vue-router'],
+      // https://github.com/unplugin/unplugin-auto-import?tab=readme-ov-file#eslint
+      eslintrc: {
+        enabled: true,
+      },
     }),
     Components({
       resolvers: [VantResolver()],

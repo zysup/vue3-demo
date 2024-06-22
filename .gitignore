@@ -14,6 +14,7 @@ dist-ssr
 .eslintcache
 auto-imports.d.ts
 components.d.ts
+.eslintrc-auto-import.json
 
 # Editor directories and files
 .idea
