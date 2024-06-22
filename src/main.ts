@@ -1,5 +1,8 @@
 import { createApp } from 'vue'
 import './styles/index.scss'
 import App from './App.vue'
+import { Button } from 'vant'
+const app = createApp(App)
 
-createApp(App).mount('#app')
+app.use(Button)
+app.mount('#app')
