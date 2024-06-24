@@ -59,7 +59,7 @@
 
 <script setup lang="ts">
 // import { ref } from 'vue'
-import { showToast, showNotify, showSuccessToast, showDialog } from 'vant'
+import { showToast, showSuccessToast, showDialog } from 'vant'
 
 defineProps({
   msg: String,

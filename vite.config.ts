@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
+import { createHtmlPlugin } from 'vite-plugin-html'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -26,6 +27,14 @@ export default defineConfig(({ mode }) => {
             importStyle: false,
           }),
         ],
+      }),
+      // 注入模板数据
+      createHtmlPlugin({
+        inject: {
+          data: {
+            ENABLE_ERUDA: env.VITE_ENABLE_ERUDA,
+          },
+        },
       }),
     ],
   }
