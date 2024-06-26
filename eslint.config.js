@@ -5,9 +5,14 @@ import globals from 'globals'
 import pluginJs from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import pluginVue from 'eslint-plugin-vue'
+import { readFile } from 'node:fs/promises'
+
+const autoImportFile = new URL('./.eslintrc-auto-import.json', import.meta.url)
+const autoImportGlobals = JSON.parse(await readFile(autoImportFile, 'utf8'))
 
 export default [
   // { languageOptions: { globals: globals.browser } },
+  { languageOptions: { globals: { ...autoImportGlobals.globals } } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   ...pluginVue.configs['flat/essential'],
@@ -24,6 +29,5 @@ export default [
       // eslint-plugin-vue (https://eslint.vuejs.org/rules/)
       'vue/multi-word-component-names': 'off', // 要求组件名称始终为 “-” 链接的单词
     },
-    extends: ['./.eslintrc-auto-import.json'],
   },
 ]

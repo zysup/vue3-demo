@@ -1,8 +1,10 @@
 <script setup lang="ts">
 // import HelloWorld from "./components/HelloWorld.vue";
+import About from '@/views/About.vue'
 </script>
 
 <template>
+  <About />
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -11,7 +13,7 @@
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <hello-world msg="Vite + Vue" />
   <!-- <Abc /> -->
 </template>
 

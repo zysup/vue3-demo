@@ -2,6 +2,7 @@
   <h1>{{ msg }}</h1>
 
   <div class="card">
+    <textarea>{{ count }}</textarea>
     <button type="button" @click="count++">count is {{ count }}==={{ double }}</button>
     <p class="bg-blue-500 text-red-400 tw-pt-8 text-base leading-7 bg-clip-text font-semibold">Edit</p>
     <code
@@ -35,7 +36,7 @@
   <input class="hover:border-black hover:bg-black focus:border-white focus:bg-white" />
   <van-button type="primary" @click="handleClick" size="small">主要按钮</van-button>
   <!-- <button @click="handleClick">按钮</button> -->
-  <van-cell-group>
+  <van-cell-group :foo="count" foo="def">
     <van-cell title="单元格" value="内容" />
     <van-cell title="单元格" value="内容" label="描述信息" />
   </van-cell-group>
@@ -65,19 +66,18 @@ defineProps({
   msg: String,
 })
 const count = ref(0)
-
+alert()
+var aaaa = 12
 // const aaa = aaa()
-// window.bbb = 'qwe'
+window.bbb = 'qwe'
 
 const double = computed(() => count.value * 2)
 function handleClick() {
-  // @ts-ignore
   showToast({
     message: '自定义图标',
     icon: 'like-o',
     duration: 100000,
   })
-  // @ts-ignore
   showSuccessToast('成功文案')
   // showNotify({ message: '提示' })
 }
