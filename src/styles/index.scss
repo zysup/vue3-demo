@@ -10,12 +10,18 @@
   user-select: none;
 }
 
-:root:root {
-  // font-family: Helvetica, Arial, sans-serif;
+html,
+body {
+  min-height: 100%;
+  background-color: #efefef;
   line-height: 1.3;
   font-size: 14px;
 }
 
 #app {
   max-width: 1280px;
+  height: 100%;
+}
+#nprogress .bar {
+  background: red;
 }

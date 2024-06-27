@@ -1,5 +1,5 @@
 <template>
-  <div>loyout</div>
+  <RouterView />
 </template>
 
 <style></style>

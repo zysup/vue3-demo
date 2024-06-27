@@ -11,7 +11,7 @@ const routes: RouteRecordRaw[] = [
     redirect: { name: 'Home' },
     children: [
       {
-        path: '/home',
+        path: 'home',
         name: 'Home',
         component: Home,
         meta: {
@@ -19,7 +19,7 @@ const routes: RouteRecordRaw[] = [
         },
       },
       {
-        path: '/about',
+        path: 'about',
         name: 'About',
         component: About,
         meta: {
@@ -27,9 +27,9 @@ const routes: RouteRecordRaw[] = [
         },
       },
       {
-        path: '/my-center',
+        path: 'my-center',
         name: 'MyCenter',
-        component: import('@/views/MyCenter.vue'),
+        component: () => import('@/views/MyCenter.vue'),
         meta: {
           title: '个人中心',
         },
