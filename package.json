@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "preinstall": "node ./.preinstall.js",
@@ -17,6 +17,7 @@
     "pnpm": ">= 9"
   },
   "dependencies": {
+    "nprogress": "^0.2.0",
     "vant": "^4.9.1",
     "vue": "^3.4.21",
     "vue-router": "4"
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@eslint/js": "^9.5.0",
     "@types/node": "^20.14.8",
+    "@types/nprogress": "^0.2.3",
     "@vitejs/plugin-vue": "^5.0.4",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.5.0",

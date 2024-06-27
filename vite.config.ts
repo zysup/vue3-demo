@@ -43,5 +43,19 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve('./src'), // 相对路径别名配置，使用 @ 代替 src
       },
     },
+    server: {
+      port: 5174,
+      host: true,
+      open: true,
+      proxy: {
+        // https://cn.vitejs.dev/config/#server-proxy
+        // '/dev-api': {
+        // target: 'http://localhost:8080',
+        // target: 'https://vue.ruoyi.vip',
+        // changeOrigin: true,
+        // rewrite: (p) => p.replace(/^\/dev-api/, '/prod-api'),
+        // },
+      },
+    },
   }
 })

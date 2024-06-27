@@ -1,7 +1,7 @@
 // https://zh-hans.eslint.org/docs/latest/use/getting-started
 // https://tsingwong.github.io/learn-eslint-plugin-vue/
 
-import globals from 'globals'
+// import globals from 'globals'
 import pluginJs from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import pluginVue from 'eslint-plugin-vue'

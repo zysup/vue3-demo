@@ -66,7 +66,6 @@ defineProps({
   msg: String,
 })
 const count = ref(0)
-alert()
 var aaaa = 12
 // const aaa = aaa()
 window.bbb = 'qwe'

@@ -1,3 +1,4 @@
 <template>
-  <div>123</div>
+  <div>about</div>
+  <HelloWorld msg="Vite + Vue" />
 </template>
