@@ -32,7 +32,7 @@
     "eslint-plugin-vue": "^9.26.0",
     "globals": "^15.5.0",
     "postcss": "^8.4.38",
-    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-px-to-viewport-8-plugin": "^1.2.5",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "sass": "^1.77.6",

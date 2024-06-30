@@ -5,4 +5,4 @@
   </van-cell-group>
 </template>
 
-<style scoped lang="sass"></style>
+<style scoped lang="scss"></style>

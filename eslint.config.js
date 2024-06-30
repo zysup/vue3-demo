@@ -1,5 +1,6 @@
 // https://zh-hans.eslint.org/docs/latest/use/getting-started
 // https://tsingwong.github.io/learn-eslint-plugin-vue/
+// https://eslint.nodejs.cn/
 
 // import globals from 'globals'
 import pluginJs from '@eslint/js'
@@ -17,10 +18,14 @@ export default [
   ...tseslint.configs.recommended,
   ...pluginVue.configs['flat/essential'],
   {
-    ignores: ['public', 'dist', 'node_modules'],
+    ignores: ['public/', 'dist/', '**/.*'],
+  },
+  {
+    files: ['{src,types}/**/*.{vue,js,jsx,ts,tsx}'],
     rules: {
       // eslint（https://eslint.org/docs/latest/rules/）
       'no-useless-escape': 'off', // 禁止不必要的转义字符
+      // semi: 'error',
 
       // typeScript (https://typescript-eslint.io/rules)
       '@typescript-eslint/no-explicit-any': 'off', // 禁止使用 any 类型
