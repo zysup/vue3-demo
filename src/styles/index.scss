@@ -5,23 +5,35 @@
 @tailwind utilities;
 
 @import './mixins.scss';
-
+@import './reset-vant.scss';
 * {
   user-select: none;
 }
-
 html,
 body {
-  min-height: 100%;
-  background-color: #efefef;
   line-height: 1.3;
   font-size: 14px;
 }
+html {
+  background-color: #eee;
+}
+body {
+  background-color: #c3cd8a;
+}
 
 #app {
-  max-width: 1280px;
-  height: 100%;
+  // background-color: goldenrod;
 }
 #nprogress .bar {
   background: red;
+}
+[class^='page-'] {
+  height: 100vh;
+  height: var(--100vh);
+  background-color: #fff;
+}
+@supports (height: 1vh) {
+  [class^='page-'] {
+    height: 100dvh;
+  }
 }
