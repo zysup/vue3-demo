@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => {
   // 环境变量
   const env = loadEnv(mode, process.cwd(), '')
   return {
+    base: './',
     plugins: [
       vue(),
       AutoImport({
@@ -46,7 +47,6 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 5174,
       host: true,
-      open: true,
       proxy: {
         // https://cn.vitejs.dev/config/#server-proxy
         // '/dev-api': {
