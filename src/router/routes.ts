@@ -1,4 +1,4 @@
-import Layout from '@/layout/index.vue'
+// import Layout from '@/layout/index.vue'
 import About from '@/pages/About.vue'
 import Home from '@/pages/Home.vue'
 import type { RouteRecordRaw } from 'vue-router'
