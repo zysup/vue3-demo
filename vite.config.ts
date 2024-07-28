@@ -5,6 +5,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
 import { createHtmlPlugin } from 'vite-plugin-html'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -37,6 +38,10 @@ export default defineConfig(({ mode }) => {
             ENABLE_ERUDA: env.VITE_ENABLE_ERUDA,
           },
         },
+      }),
+      visualizer({
+        filename: './dist/stats.html',
+        title: 'Bundle Visualizer',
       }),
     ],
     resolve: {
