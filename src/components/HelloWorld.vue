@@ -110,6 +110,7 @@ const onClick2 = () => {
   background-color: red;
 }
 .nihao {
+  @apply text-right;
   // width: 100px;
   width: 375px;
   outline: 1px solid red;
