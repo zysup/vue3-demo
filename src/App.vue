@@ -1,3 +1,8 @@
+<!--
+@file 项目入口文件
+@author Router
+-->
+
 <template>
   <RouterView class="qwe" />
   <van-tabbar route v-show="route.meta.showFooter">

@@ -31,6 +31,8 @@ body {
   height: 100vh;
   height: var(--100vh);
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 @supports (height: 1dvh) {
   [class^='page-'] {

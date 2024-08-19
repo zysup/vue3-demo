@@ -25,7 +25,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/my-center',
     name: 'MyCenter',
-    component: () => import('@/pages/MyCenter.vue'),
+    component: () => import('@/pages/MyCenter/index.vue'),
     meta: {
       title: '个人中心',
     },
@@ -38,46 +38,6 @@ const routes: RouteRecordRaw[] = [
       title: '隐私政策',
     },
   },
-  // {
-  //   path: '/',
-  //   name: 'Layout',
-  //   component: Layout,
-  //   redirect: { name: 'Home' },
-  //   children: [
-  //     {
-  //       path: 'home',
-  //       name: 'Home',
-  //       component: Home,
-  //       meta: {
-  //         title: '首页',
-  //       },
-  //     },
-  //     {
-  //       path: 'about',
-  //       name: 'About',
-  //       component: About,
-  //       meta: {
-  //         title: '关于',
-  //       },
-  //     },
-  //     {
-  //       path: 'my-center',
-  //       name: 'MyCenter',
-  //       component: () => import('@/pages/MyCenter.vue'),
-  //       meta: {
-  //         title: '个人中心',
-  //       },
-  //     },
-  //     {
-  //       path: 'privacy-policy',
-  //       name: 'PrivacyPolicy',
-  //       component: () => import('@/pages/PrivacyPolicy/index.vue'),
-  //       meta: {
-  //         title: '个人中心',
-  //       },
-  //     },
-  //   ],
-  // },
 ]
 
 export default routes

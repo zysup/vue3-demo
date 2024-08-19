@@ -1,3 +1,8 @@
+/**
+ * @file 项目入口ts文件
+ * @author Router
+ */
+
 import { createApp } from 'vue'
 import router from '@/router'
 import 'vant/lib/index.css'
