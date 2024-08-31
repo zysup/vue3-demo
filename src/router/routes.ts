@@ -38,6 +38,22 @@ const routes: RouteRecordRaw[] = [
       title: '隐私政策',
     },
   },
+  {
+    path: '/vue3-feature',
+    name: 'Vue3Feature',
+    component: () => import('@/pages/Vue3Feature/index.vue'),
+    meta: {
+      title: 'Vue3特性',
+    },
+  },
+  {
+    path: '/greedy-snake',
+    name: 'GreedySnake',
+    component: () => import('@/pages/GreedySnake/index.vue'),
+    meta: {
+      title: 'Vue3特性',
+    },
+  },
 ]
 
 export default routes

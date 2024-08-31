@@ -1,11 +1,11 @@
 <!--
-@file 隐私协议
+@file vue3特性
 @author Router
 -->
 
 <template>
-  <div class="page-privacy-policy flex flex-col">
-    <van-nav-bar title="Privacy policy" left-arrow @click-left="onClickLeft" />
+  <div class="page-vue3-feature flex flex-col">
+    <van-nav-bar title="Vue3 feature" left-arrow @click-left="onClickLeft" />
     <article class="flex-1 overflow-auto p-10 text-18">
       <section v-for="n in 5" :key="n" class="mb-12 rounded-4 p-12">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis optio eum excepturi minus, itaque
@@ -18,9 +18,12 @@
   </div>
 </template>
 <script setup lang="ts">
+import {} from 'module'
 const onClickLeft = () => history.back()
 </script>
 <style scoped lang="scss">
-.page-privacy-policy {
+.page-example {
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 </style>

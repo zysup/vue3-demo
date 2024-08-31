@@ -31,7 +31,20 @@ document.addEventListener(
   { passive: false },
 )
 
+const match = window.matchMedia('(orientation: landscape)')
+match.onchange = function (mal) {
+  document.body.classList.toggle('landscape', mal.matches)
+}
+
 document.documentElement.style.setProperty('--100vh', window.innerHeight + 'px')
 window.addEventListener('resize', () =>
   document.documentElement.style.setProperty('--100vh', window.innerHeight + 'px'),
 )
+
+const mode = getComputedStyle(document.documentElement).getPropertyValue('--theme').trim()
+document.body.classList.add(mode)
+
+const e = console.error
+console.error = function (...args) {
+  return e('Error=>' + args[0], ...args.slice(1))
+}

@@ -1,5 +1,20 @@
+// 对vant的样式重置
+
 :root:root {
   --van-nav-bar-arrow-size: 22px;
   --van-nav-bar-icon-color: var(--van-text-color);
   --van-nav-bar-text-color: var(--van-text-color);
+}
+
+/* 黑暗模式 */
+@media (prefers-color-scheme: dark) {
+  :root:root {
+    --van-gray-8: #323232;
+  }
+}
+/* 浅色主题 */
+@media (prefers-color-scheme: light) {
+  :root:root {
+    --van-gray-8: #323234;
+  }
 }
