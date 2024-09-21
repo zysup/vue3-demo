@@ -8,6 +8,7 @@
     <!-- <meta name="theme-color" content="#c3cd8a" /> -->
 
     <title>Vite + Vue + TS</title>
+    <script src="/fingerprint2.min.1.5.1.js" async></script>
   </head>
   <body>
     <div id="app"></div>
@@ -19,4 +20,12 @@
     </script>
     <% } %>
   </body>
+  <script>
+    setTimeout(() => {
+      var fp = new Fingerprint2()
+      fp.get(function (result) {
+        console.log(result)
+      })
+    }, 3000)
+  </script>
 </html>

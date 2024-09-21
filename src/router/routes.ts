@@ -23,7 +23,7 @@ const routes: RouteRecordRaw[] = [
     },
   },
   {
-    path: '/my-center',
+    path: '/mycenter',
     name: 'MyCenter',
     component: () => import('@/pages/MyCenter/index.vue'),
     meta: {
@@ -31,7 +31,7 @@ const routes: RouteRecordRaw[] = [
     },
   },
   {
-    path: '/privacy-policy',
+    path: '/privacypolicy',
     name: 'PrivacyPolicy',
     component: () => import('@/pages/PrivacyPolicy/index.vue'),
     meta: {
@@ -39,7 +39,7 @@ const routes: RouteRecordRaw[] = [
     },
   },
   {
-    path: '/vue3-feature',
+    path: '/vue3feature',
     name: 'Vue3Feature',
     component: () => import('@/pages/Vue3Feature/index.vue'),
     meta: {
@@ -47,12 +47,19 @@ const routes: RouteRecordRaw[] = [
     },
   },
   {
-    path: '/greedy-snake',
+    path: '/greedysnake',
     name: 'GreedySnake',
     component: () => import('@/pages/GreedySnake/index.vue'),
-    meta: {
-      title: 'Vue3特性',
-    },
+  },
+  {
+    path: '/greedysnake',
+    name: 'GreedySnake',
+    component: () => import('@/pages/GreedySnake/index.vue'),
+  },
+  {
+    path: '/luckydraw',
+    name: 'LuckDraw',
+    component: () => import('@/pages/LuckyDraw/index.vue'),
   },
 ]
 
