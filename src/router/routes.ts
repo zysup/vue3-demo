@@ -1,6 +1,6 @@
 // import Layout from '@/layout/index.vue'
-import About from '@/pages/About.vue'
-import Home from '@/pages/Home.vue'
+import About from '@/pages/About/index.vue'
+import Home from '@/pages/Home/index.vue'
 import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
@@ -47,6 +47,14 @@ const routes: RouteRecordRaw[] = [
     },
   },
   {
+    path: '/vantfeature',
+    name: 'VantFeature',
+    component: () => import('@/pages/VantFeature/index.vue'),
+    meta: {
+      title: 'Vant特性',
+    },
+  },
+  {
     path: '/greedysnake',
     name: 'GreedySnake',
     component: () => import('@/pages/GreedySnake/index.vue'),
@@ -60,6 +68,11 @@ const routes: RouteRecordRaw[] = [
     path: '/luckydraw',
     name: 'LuckDraw',
     component: () => import('@/pages/LuckyDraw/index.vue'),
+  },
+  {
+    path: '/authorizedlogin',
+    name: 'Authorizedlogin',
+    component: () => import('@/pages/Authorizedlogin/index.vue'),
   },
 ]
 

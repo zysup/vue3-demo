@@ -13,6 +13,8 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/utils/fblogin.js"></script>
+
     <% if (ENABLE_ERUDA) { %>
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>
@@ -20,6 +22,7 @@
     </script>
     <% } %>
   </body>
+
   <script>
     setTimeout(() => {
       var fp = new Fingerprint2()
