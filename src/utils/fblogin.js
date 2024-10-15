@@ -1,13 +1,15 @@
+import { showToast } from 'vant'
+
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
-  console.log('qwe statusChangeCallback()', response)
+  console.log('qwe statusChangeCallback() response', response)
   // The response object is returned with a status field that lets the
   // app know the current login status of the person.
   // Full docs on the response object can be found in the documentation
   // for FB.getLoginStatus().
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
-    testAPI()
+    doFBLogin()
   } else {
     // The person is not logged into your app or we are unable to tell.
     console.log('Please log into this app')
@@ -15,8 +17,9 @@ function statusChangeCallback(response) {
       function (response) {
         if (response.status === 'connected') {
           // Logged into your webpage and Facebook.
-          testAPI()
+          doFBLogin()
         } else {
+          console.log('qwe opps somethig wrong')
           // The person is not logged into your webpage or we are unable to tell.
         }
       },
@@ -36,10 +39,10 @@ function checkLoginState() {
 }
 
 window.fbAsyncInit = function () {
+  console.trace('qwe 调用栈')
   FB.init({
     appId: '1071179317728125',
-    cookie: true, // enable cookies to allow the server to access
-    // the session
+    cookie: true, // enable cookies to allow the server to access the session
     xfbml: true, // parse social plugins on this page
     version: 'v20.0', // Specify the Graph API version to use
   })
@@ -56,11 +59,10 @@ window.fbAsyncInit = function () {
   //
   // These three cases are handled in the callback function.
 
-  FB.getLoginStatus(function (response) {
-    statusChangeCallback(response)
-  })
+  // FB.getLoginStatus(function (response) {
+  //   statusChangeCallback(response)
+  // })
 }
-
 // Load the SDK asynchronously
 ;(function (d, s, id) {
   var js,
@@ -74,10 +76,10 @@ window.fbAsyncInit = function () {
 
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
-function testAPI() {
+function doFBLogin() {
   console.log('Welcome!  Fetching your information.... ')
   FB.api('/me', function (response) {
-    console.log('Successful login for: ' + JSON.stringify(response, null, 2))
+    showToast({ message: '登录成功 ' + JSON.stringify(response, null, 2), duration: 4000 })
   })
 }
 

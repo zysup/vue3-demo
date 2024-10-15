@@ -12,8 +12,8 @@ import App from './App.vue'
 const app = createApp(App)
 
 app.use(router)
-app.mount('#app')
-
+console.log('qwe before app mount')
+console.log('qwe after app mount')
 document.addEventListener(
   'touchstart',
   function (event) {
@@ -48,3 +48,5 @@ const e = console.error
 console.error = function (...args) {
   return e('Error=>' + args[0], ...args.slice(1))
 }
+
+app.mount('#app')

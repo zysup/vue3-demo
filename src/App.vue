@@ -13,5 +13,11 @@
 </template>
 
 <script setup lang="ts">
+console.log('qwe app.vue begin')
+
+onMounted(() => {
+  console.log('qwe app.vue mounted')
+})
+
 const route = useRoute()
 </script>

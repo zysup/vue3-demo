@@ -1,7 +1,6 @@
 <!--
-  @file 贪吃蛇
+  @file 授权登录
   @author Router
-  https://developers.facebook.com/docs/facebook-login/web/js-example
 -->
 
 <template>
