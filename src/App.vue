@@ -13,6 +13,9 @@
 </template>
 
 <script setup lang="ts">
+import { setToastDefaultOptions, resetToastDefaultOptions } from 'vant'
+
+setToastDefaultOptions({ duration: 20000 })
 console.log('qwe app.vue begin')
 
 onMounted(() => {

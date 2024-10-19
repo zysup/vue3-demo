@@ -2,11 +2,13 @@
 
 :root:root {
   --van-nav-bar-arrow-size: 22px;
-  // --van-nav-bar-height: 46rem;
   --van-nav-bar-icon-color: var(--van-text-color);
   --van-nav-bar-text-color: var(--van-text-color);
 
   --van-button-mini-height: 40px;
+
+  --van-toast-default-width: 200px;
+  --van-toast-background: rgba(0, 0, 0, 0.5);
 }
 
 /* 黑暗模式 */

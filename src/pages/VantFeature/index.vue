@@ -12,10 +12,16 @@
       <van-button plain icon="https://dummyimage.com/60x40/000/fff&text=aaaa" type="primary" disabled>
         按钮
       </van-button>
+      <van-icon name="chat-o" />
     </div>
+    <br /><br />
+    <div class="van-safe-area-bottom weq">qwe</div>
+
+    <div class="van-haptics-feedback" style="background-color: red">adasd</div>
   </div>
 </template>
 <script setup lang="ts" name="VantFeature">
+import { showToast, showFailToast } from 'vant'
 const onClickLeft = () => history.back()
 
 function handleClick(evt: MouseEvent) {
@@ -24,4 +30,12 @@ function handleClick(evt: MouseEvent) {
 // window.handleOnClick = function name(evt: MouseEvent) {
 //   console.log('qwe 2', evt)
 // }
+
+showFailToast({
+  // duration: 5000,
+  message: 'opps somethig wrong asfd asd fasd fasdf as fsf ',
+  // icon: 'warning-o',
+  icon: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.png',
+  iconSize: '2em',
+})
 </script>

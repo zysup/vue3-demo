@@ -7,4 +7,8 @@ interface Window {
       logPageView: Function
     }
   }
+  Fingerprint2: Function
+  eruda: any
 }
+
+declare const Fingerprint2: any

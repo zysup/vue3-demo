@@ -1,4 +1,4 @@
-import { showToast } from 'vant'
+import { showToast, showFailToast } from 'vant'
 
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
@@ -19,7 +19,11 @@ function statusChangeCallback(response) {
           // Logged into your webpage and Facebook.
           doFBLogin()
         } else {
-          console.log('qwe opps somethig wrong')
+          showFailToast({
+            duration: 3000,
+            message: 'opps somethig wrong',
+            icon: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.png',
+          })
           // The person is not logged into your webpage or we are unable to tell.
         }
       },
@@ -39,7 +43,6 @@ function checkLoginState() {
 }
 
 window.fbAsyncInit = function () {
-  console.trace('qwe 调用栈')
   FB.init({
     appId: '1071179317728125',
     cookie: true, // enable cookies to allow the server to access the session
