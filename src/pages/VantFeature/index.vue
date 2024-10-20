@@ -21,7 +21,7 @@
   </div>
 </template>
 <script setup lang="ts" name="VantFeature">
-import { showToast, showFailToast } from 'vant'
+import { showFailToast } from 'vant'
 const onClickLeft = () => history.back()
 
 function handleClick(evt: MouseEvent) {
