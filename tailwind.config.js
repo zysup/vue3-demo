@@ -48,7 +48,7 @@ export default {
       // yellow: colors.yellow,
       // green: colors.green,
       // blue: colors.blue,
-      // gray: colors.gray,
+      gray: '#dddddd',
     },
     extend: {
       // 宽度

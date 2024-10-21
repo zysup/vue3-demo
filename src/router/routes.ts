@@ -74,6 +74,11 @@ const routes: RouteRecordRaw[] = [
     name: 'Authorizedlogin',
     component: () => import('@/pages/Authorizedlogin/index.vue'),
   },
+  {
+    path: '/wakelock',
+    name: 'WakeLock',
+    component: () => import('@/pages/WakeLock/index.vue'),
+  },
 ]
 
 export default routes

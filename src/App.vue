@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import { setToastDefaultOptions } from 'vant'
 
-setToastDefaultOptions({ duration: 20000 })
+setToastDefaultOptions({ duration: 3000 })
 console.log('qwe app.vue begin')
 
 onMounted(() => {

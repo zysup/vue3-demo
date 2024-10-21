@@ -8,6 +8,7 @@
     <van-cell title="Lucky Draw" is-link to="/luckydraw" />
     <van-cell title="Vant Feature" is-link to="/vantfeature" />
     <van-cell title="Authorizedlogin" is-link to="/authorizedlogin" />
+    <van-cell title="WakeLock" is-link to="/wakelock" />
   </van-cell-group>
 </template>
 
