@@ -36,6 +36,26 @@
   "search.exclude": {
     "**/*.svg": true,
     "**/dist": true,
-    "**/public": true
+    "**/public/*.{js}": true
+  },
+  "vscodeGitCommit.template": ["[type]: {type}", "[description]: {description}", "[ticket]: {ticket}"],
+  "vscodeGitCommit.variables": {
+    "type": [
+      {
+        "label": "feature"
+      },
+      {
+        "label": "optimize"
+      },
+      {
+        "label": "fix"
+      },
+      {
+        "label": "hotfix"
+      },
+      {
+        "label": "other"
+      }
+    ]
   }
 }

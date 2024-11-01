@@ -10,9 +10,9 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { showToast, showFailToast } from 'vant'
-const wakeLock = ref(null)
+const wakeLock: any = ref(null)
 const radioVlaue = ref(1)
 const onClickLeft = () => history.back()
 

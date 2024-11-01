@@ -4,6 +4,7 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "bradlc.vscode-tailwindcss",
-    "vue.volar"
+    "vue.volar",
+    "rioukkevin.vscode-git-commit"
   ]
 }
