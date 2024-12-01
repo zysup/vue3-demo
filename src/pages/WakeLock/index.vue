@@ -54,7 +54,7 @@ setWakeLock()
 onMounted(() => {
   if (navigator.wakeLock) {
     // 选项卡切换到当前页面，如果已经释放了熄屏，再次锁定
-    document.addEventListener('visibilitychange', (e) => {
+    document.addEventListener('visibilitychange', (_) => {
       console.log('qwe', document.visibilityState, radioVlaue.value)
       if (wakeLock.value === null && document.visibilityState === 'visible' && radioVlaue.value == 1) {
         console.log('qwe123')

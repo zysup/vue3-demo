@@ -1,12 +1,15 @@
-console.log('qwe', import.meta.env)
-
-const aaa = {
+console.log('qwe', new URL('data.txt', import.meta.url))
+// console.log(qwe)
+type Aaa = {
+  bbb: number
+  ccc?: number
+}
+const aaa: Aaa = {
   bbb: 1,
 }
-
-aaa.bbb &&= 123
-// @ts-expect-error qww
-aaa.bbb = aaa?.ccc?.ddd ?? '456'
+console.log('qwe this', this)
+aaa.ccc ??= 123
+// aaa.bbb = aaa?.ccc?.ddd ?? '456'
 console.log('qweqwe', aaa)
 
 import arrayMap from 'array-map-abc'

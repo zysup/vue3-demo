@@ -2,7 +2,7 @@
  * @file 项目入口ts文件
  * @author Router
  */
-
+console.log('main.ts 开始执行')
 import { createApp } from 'vue'
 import router from '@/router'
 import 'vant/lib/index.css'
@@ -12,8 +12,7 @@ import App from './App.vue'
 const app = createApp(App)
 
 app.use(router)
-console.log('qwe before app mount')
-console.log('qwe after app mount')
+
 document.addEventListener(
   'touchstart',
   function (event) {
@@ -44,9 +43,9 @@ window.addEventListener('resize', () =>
 const mode = getComputedStyle(document.documentElement).getPropertyValue('--theme').trim()
 document.body.classList.add(mode)
 
-const e = console.error
+const _error = console.error
 console.error = function (...args) {
-  return e('Error=>' + args[0], ...args.slice(1))
+  return _error('Error=> ' + args[0], ...args.slice(1))
 }
 
 app.mount('#app')

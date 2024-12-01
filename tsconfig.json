@@ -8,6 +8,8 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+    "allowJs": true,
+    "checkJs": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -23,6 +25,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["**/*.ts", "**/*.vue"]
+  "include": ["**/*.ts", "**/*.vue", "src/**/*.js"]
   // "references": [{ "path": "./tsconfig.node.json" }]
 }

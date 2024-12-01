@@ -13,13 +13,13 @@
 </template>
 
 <script setup lang="ts">
+console.log('app.vue ts文件开始加载')
 import { setToastDefaultOptions } from 'vant'
 
 setToastDefaultOptions({ duration: 3000 })
-console.log('qwe app.vue begin')
 
 onMounted(() => {
-  console.log('qwe app.vue mounted')
+  console.log('app.vue mounted')
 })
 
 const route = useRoute()

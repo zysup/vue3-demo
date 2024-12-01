@@ -1,5 +1,5 @@
+// @ts-nocheck
 import { showToast, showFailToast } from 'vant'
-
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
   console.log('qwe statusChangeCallback() response', response)
