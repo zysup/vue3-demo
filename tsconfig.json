@@ -8,8 +8,8 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "allowJs": true,
-    "checkJs": true,
+    // "allowJs": true,
+    // "checkJs": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
