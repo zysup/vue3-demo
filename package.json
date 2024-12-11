@@ -19,6 +19,7 @@
   "dependencies": {
     "array-map-abc": "github:zysup/arraymapabc",
     "axios": "^1.7.2",
+    "hellojs": "2.0.0-4",
     "nprogress": "^0.2.0",
     "vant": "^4.9.1",
     "vue": "^3.4.21",
