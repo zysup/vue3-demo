@@ -1,7 +1,7 @@
 import { showToast } from 'vant'
 
 const clientId = '278327607206-0i9241asfd41bcd2ueovopsq71c7h083.apps.googleusercontent.com'
-const clientSecret = 'GOCSPX-HfnrHnAalpfc0_' + 'bklzmeGEAyT-LT'
+const clientSecret = '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'
 const redirectUri = 'https://zysup.github.io'
 const script = document.createElement('script')
 const handleGoogleSignIn = (response) => {
@@ -79,7 +79,7 @@ function handleRedirectPageLogin() {
   }
 
   fetch(
-    `https://oauth2.googleapis.com/token?client_id=${clientId}&client_secret123=${clientSecret}&code=${code}&grant_type=authorization_code&redirect_uri=${redirectUri}`,
+    `https://oauth2.googleapis.com/token?client_id=${clientId}&client_secret=${clientSecret}&code=${code}&grant_type=authorization_code&redirect_uri=${redirectUri}`,
     requestOptions,
   )
     .then((response) => response.json())
