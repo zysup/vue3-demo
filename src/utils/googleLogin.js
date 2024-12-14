@@ -61,6 +61,7 @@ function manualLogin() {
   const ahref = `https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/drive.metadata.readonly&include_granted_scopes=true&response_type=code&state=abc&redirect_uri=${redirectUri}&client_id=${clientId}&prompt=consent`
   const aEle = document.createElement('a')
   aEle.href = ahref
+  aEle.target = '_blank'
   aEle.click()
 }
 // 授权后的重定向逻辑处理,通过code和客户端秘钥获取用户信息
