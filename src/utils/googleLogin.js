@@ -79,7 +79,7 @@ function handleRedirectPageLogin() {
   }
 
   fetch(
-    `https://oauth2.googleapis.com/token?client_id=${clientId}&client_secret=${clientSecret}&code=${code}&grant_type=authorization_code&redirect_uri=${redirectUri}`,
+    `https://oauth2.googleapis.com/token?client_id=${clientId}&client_secret123=${clientSecret}&code=${code}&grant_type=authorization_code&redirect_uri=${redirectUri}`,
     requestOptions,
   )
     .then((response) => response.json())
