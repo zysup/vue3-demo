@@ -37,7 +37,7 @@ window.initializeGoogleSignIn = (client_id = clientId) => {
     console.log('qwe notification', notification)
     console.log('qwe notification.isNotDisplayed()', notification.isNotDisplayed())
     console.log('qwe notification.isSkippedMoment()', notification.isSkippedMoment())
-    if (notification.g === 'skipped' && notification.l === 'unkown_reason') {
+    if (notification.g === 'skipped' && notification.l === 'unknown_reason') {
       console.log('qwe 触发手动登录')
       manualLogin()
     }
