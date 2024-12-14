@@ -13,5 +13,6 @@
     <van-divider />
   </div>
 </template>
-
-<script setup></script>
+<script setup>
+const onClickLeft = () => history.back()
+</script>
