@@ -17,6 +17,7 @@
     "pnpm": ">= 9"
   },
   "dependencies": {
+    "@tanstack/vue-query": "^5.62.8",
     "array-map-abc": "github:zysup/arraymapabc",
     "axios": "^1.7.2",
     "hellojs": "2.0.0-4",
