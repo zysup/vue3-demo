@@ -8,11 +8,14 @@
     <van-nav-bar title="Vue3 feature" left-arrow @click-left="onClickLeft" />
     <img src="@/assets/icons/comment.svg" alt="" />
     <img src="@/assets/icons/arrow-alt-circle-right.svg" alt="" />
-    <img src="@/assets/redgirl.png" alt="" />
+    <hr />
+    <van-button type="primary" @click="showAsyncCopmonent = !showAsyncCopmonent">show AsyncCopmonent</van-button>
+    <AsyncCopmonent v-if="showAsyncCopmonent" />
   </div>
 </template>
 <script setup lang="ts">
-import {} from 'module'
+const AsyncCopmonent = defineAsyncComponent(() => import('./AsyncCopmonent.vue'))
+const showAsyncCopmonent = ref(false)
 const onClickLeft = () => history.back()
 </script>
 <style scoped lang="scss">

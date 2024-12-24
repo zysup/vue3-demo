@@ -12,7 +12,7 @@ aaa.ccc ??= 123
 // aaa.bbb = aaa?.ccc?.ddd ?? '456'
 console.log('qweqwe', aaa)
 
-import arrayMap from 'array-map-abc'
+// import arrayMap from 'array-map-abc's
 
 // console.log(
 //   'qwe',
@@ -27,7 +27,7 @@ console.log('qwe', axios.Axios)
 // var ci;
 // wt.bbb=((ci=wt==null?void 0:wt.ccc)==null?void 0:ci.ddd)??"456";
 // console.log("qweqwe",wt);
-const aabc = arrayMap([1, 2], (item, _) => {
-  return item * 2
-})
-console.log('qwe aabc', aabc)
+// const aabc = arrayMap([1, 2], (item, _) => {
+//   return item * 2
+// })
+// console.log('qwe aabc', aabc)
