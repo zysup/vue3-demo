@@ -2,7 +2,7 @@ import { showToast } from 'vant'
 
 const clientId = '278327607206-0i9241asfd41bcd2ueovopsq71c7h083.apps.googleusercontent.com'
 const clientSecret = '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'
-const redirectUri = 'https://zysup.github.io'
+let redirectUri = 'https://zysup.github.io'
 const script = document.createElement('script')
 const handleGoogleSignIn = (response) => {
   // 处理Google登录成功的响应
@@ -44,21 +44,65 @@ window.initializeGoogleSignIn = (client_id = clientId) => {
   })
 }
 if (window.google) {
-  // initializeGoogleSignIn(clientId)
+  console.log('google 登录sdk加载完成')
 } else {
   script.src = 'https://accounts.google.com/gsi/client' // 加载客户端库
   script.async = true
-  // script.onload = () => {
-  //   console.log('google 登录sdk加载完成')
-  //   initializeGoogleSignIn()
-  // }
+  script.onload = () => {
+    console.log('google 登录sdk加载完成')
+  }
   document.head.appendChild(script)
 }
+/**
+ * 隐式流程
+ */
+function ImplicitGrant() {
+  const client = google.accounts.oauth2.initTokenClient({
+    client_id: clientId,
+    scope: 'https://www.googleapis.com/auth/calendar.readonly',
+    callback: (response) => {
+      console.log('qwe ImplicitGrant', response)
+    },
+  })
+  client.requestAccessToken()
+
+  // const client = google.accounts.oauth2.initCodeClient({
+  //   client_id: clientId,
+  //   scope: 'https://www.googleapis.com/auth/calendar.readonly',
+  //   ux_mode: 'redirect',
+  //   redirect_uri: 'http://localhost:5174',
+  //   state: 'YOUR_BINDING_VALUE',
+  // })
+
+  // const client = google.accounts.oauth2.initCodeClient({
+  //   client_id: clientId,
+  //   scope: 'https://www.googleapis.com/auth/calendar.readonly',
+  //   ux_mode: 'popup',
+  //   callback: (response) => {
+  //     const xhr = new XMLHttpRequest()
+  //     xhr.open('POST', 'http://localhost:5174', true)
+  //     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+  //     // Set custom header for CRSF
+  //     xhr.setRequestHeader('X-Requested-With', 'XmlHttpRequest')
+  //     xhr.onload = function () {
+  //       console.log('Auth code response: ' + xhr.responseText)
+  //     }
+  //     xhr.send('code=' + response.code)
+  //   },
+  // })
+  // client.requestCode()
+}
+window.ImplicitGrant = ImplicitGrant
 /**
  * 跳转到授权页面,触发手动登录
  */
 function manualLogin() {
-  const ahref = `https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/drive.metadata.readonly&include_granted_scopes=true&response_type=code&state=abc&redirect_uri=${redirectUri}&client_id=${clientId}&prompt=consent`
+  // "email profile https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/drive.metadata.readonly openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
+  if (location.href.includes('localhost')) {
+    redirectUri = 'http://localhost:5174'
+  }
+  const ahref = `https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile&include_granted_scopes=true&response_type=code&state=abc&redirect_uri=${redirectUri}&client_id=${clientId}&prompt=consent`
+  // const ahref = `https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/drive.metadata.readonly&include_granted_scopes=true&response_type=code&state=abc&redirect_uri=${redirectUri}&client_id=${clientId}&prompt=consent`
   const aEle = document.createElement('a')
   aEle.href = ahref
   aEle.target = '_blank'
@@ -70,6 +114,9 @@ function handleRedirectPageLogin() {
   const code = _p.get('code')
   // const state = _p.get('state')
   if (!code) return
+  if (location.href.includes('localhost')) {
+    redirectUri = 'http://localhost:5174'
+  }
   const myHeaders = new Headers()
   myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
 
@@ -85,6 +132,21 @@ function handleRedirectPageLogin() {
   )
     .then((response) => response.json())
     .then((result) => {
+      // {
+      //   access_token: 'ya29.a0ARW5m74OSxwFh4GaQxS'
+      //   expires_in: 3599
+      //   scope: 'https://www.googleapis.com/auth/drive.metadata.readonly'
+      //   token_type: 'Bearer'
+      // }
+      // {
+      //   access_token: 'ya29.a0ARW5m75ucl'
+      //   expires_in: 3599
+      //   id_token: 'a.b.c'
+      //   scope: 'openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/drive.metadata.readonly https://www.googleapis.com/auth/userinfo.email'
+      //   token_type: 'Bearer'
+      // }
+
+      console.log('qwe result', result)
       const userinfo = JSON.parse(
         decodeURIComponent(escape(window.atob(result.id_token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')))),
       )
@@ -95,3 +157,4 @@ function handleRedirectPageLogin() {
 }
 
 handleRedirectPageLogin()
+window.manualLogin = manualLogin
