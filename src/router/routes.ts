@@ -79,6 +79,11 @@ const routes: RouteRecordRaw[] = [
     name: 'WakeLock',
     component: () => import('@/pages/WakeLock/index.vue'),
   },
+  {
+    path: '/webviewpage',
+    name: 'WebViewPage',
+    component: () => import('@/pages/WebViewPage/index.vue'),
+  },
 ]
 
 export default routes
