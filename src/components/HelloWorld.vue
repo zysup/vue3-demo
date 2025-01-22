@@ -1,5 +1,22 @@
 <template>
   <h1>{{ msg }}</h1>
+  <icon-ic-baseline-add-chart />
+  <IconEpFold class="v-icon" />
+  <icon-ep-fold class="v-icon" />
+  <icon-ep-edit />
+  <icon-ep-umbrella />
+  <icon-mdi-shield-lock />
+  <br />
+  <icon-line-md-briefcase-plus-filled v-if="showIcon" />
+  <icon-line-md-emoji-frown-open />
+  <icon-svg-spinners-wind-toy />
+  <div style="font-size: 100px; color: red">
+    <icon-meteocons-solar-eclipse-fill />
+  </div>
+  <icon-cif-cn />
+
+  <!-- i-mdi-shield-lock -->
+  <!-- mdi:shield-lock -->
 
   <div class="card">
     <!-- <textarea>{{ count }}</textarea> -->
@@ -31,9 +48,9 @@
     in your IDE for a better DX
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
-  <p class="tw-bg-sky-500 hover:bg-sky-700 bg-purple landscape:hidden">asdf</p>
+  <p class="tw-bg-sky-500 hover:bg-sky-700 bg-blue w-0 bg-gray landscape:hidden">asdf</p>
   <p class="border-r-purple text-abc-1 text-current empty:border"></p>
-  <input class="hover:border-black hover:bg-black focus:border-white focus:bg-white" />
+  <input class="m-[134px] text-12 hover:border-black hover:bg-black focus:border-white focus:bg-white" />
   <van-button type="primary" @click="handleClick" size="small">主要按钮</van-button>
   <!-- <button @click="handleClick">按钮</button> -->
   <van-cell-group :foo="count">
@@ -56,7 +73,8 @@
   </div>
   <div class="nihao text-28">你好</div>
   <div class="pt-98 w-a rud w-100 rounded-30 px-38 leading-1.3" style="outline: 3px solid blue">世界</div>
-  <div class="mt-38 h-374 bg-black bg-opacity-30"></div>
+  <div class="mt-38 h-374 bg-black bg-opacity-30">123123123</div>
+  <!-- ic:baseline-add-chart -->
 </template>
 
 <script setup lang="ts">
@@ -91,6 +109,10 @@ const showNotify1 = () => {
 const onClick2 = () => {
   showDialog({ title: '提示', message: 'HelloWorld' })
 }
+const showIcon = ref(false)
+setTimeout(() => {
+  showIcon.value = true
+}, 5000)
 </script>
 
 <style scoped lang="scss">
