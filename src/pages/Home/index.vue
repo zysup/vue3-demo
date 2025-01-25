@@ -10,6 +10,7 @@
     <van-cell title="Authorizedlogin" is-link to="/authorizedlogin" />
     <van-cell title="WakeLock" is-link to="/wakelock" />
     <van-cell title="WebViewPage" is-link to="/webviewpage" />
+    <van-cell title="Swiper" is-link to="/swiper" />
   </van-cell-group>
 </template>
 

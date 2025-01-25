@@ -84,6 +84,11 @@ const routes: RouteRecordRaw[] = [
     name: 'WebViewPage',
     component: () => import('@/pages/WebViewPage/index.vue'),
   },
+  {
+    path: '/swiper',
+    name: 'Swiper',
+    component: () => import('@/pages/Swiper/index.vue'),
+  },
 ]
 
 export default routes
