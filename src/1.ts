@@ -1,4 +1,5 @@
-console.log('qwe', new URL('data.txt', import.meta.url))
+/* @vite-ignore */
+// console.log('qwe', new URL('data.txt', import.meta.url))
 // console.log(qwe)
 type Aaa = {
   bbb: number

@@ -87,7 +87,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/swiper',
     name: 'Swiper',
-    component: () => import('@/pages/Swiper/index.vue'),
+    component: () => import('@/pages/Swiper/Swiper.vue'),
   },
 ]
 

@@ -30,10 +30,10 @@ importers:
         specifier: ^4.9.1
         version: 4.9.1(vue@3.4.30(typescript@5.5.2))
       vue:
-        specifier: ^3.4.21
+        specifier: ^3.4.30
         version: 3.4.30(typescript@5.5.2)
       vue-router:
-        specifier: '4'
+        specifier: ^4.4.0
         version: 4.4.0(vue@3.4.30(typescript@5.5.2))
     devDependencies:
       '@eslint/js':
@@ -64,7 +64,7 @@ importers:
         specifier: ^0.2.3
         version: 0.2.3
       '@vitejs/plugin-vue':
-        specifier: ^5.0.4
+        specifier: ^5.0.5
         version: 5.0.5(vite@5.3.1(@types/node@20.14.8)(sass@1.77.6)(terser@5.31.1))(vue@3.4.30(typescript@5.5.2))
       autoprefixer:
         specifier: ^10.4.19
@@ -76,7 +76,7 @@ importers:
         specifier: ^9.26.0
         version: 9.26.0(eslint@9.5.0)
       globals:
-        specifier: ^15.5.0
+        specifier: ^15.6.0
         version: 15.6.0
       postcss:
         specifier: ^8.4.38
@@ -100,10 +100,10 @@ importers:
         specifier: ^3.4.4
         version: 3.4.4
       typescript:
-        specifier: ^5.2.2
+        specifier: ^5.5.2
         version: 5.5.2
       typescript-eslint:
-        specifier: ^7.13.0
+        specifier: ^7.13.1
         version: 7.13.1(eslint@9.5.0)(typescript@5.5.2)
       unplugin-auto-import:
         specifier: ^0.17.6
@@ -115,7 +115,7 @@ importers:
         specifier: ^0.27.0
         version: 0.27.0(@babel/parser@7.24.7)(rollup@4.18.0)(vue@3.4.30(typescript@5.5.2))
       vite:
-        specifier: ^5.2.0
+        specifier: ^5.3.1
         version: 5.3.1(@types/node@20.14.8)(sass@1.77.6)(terser@5.31.1)
       vite-plugin-html:
         specifier: ^3.2.2
@@ -124,7 +124,7 @@ importers:
         specifier: ^0.4.0
         version: 0.4.0(vite@5.3.1(@types/node@20.14.8)(sass@1.77.6)(terser@5.31.1))
       vue-tsc:
-        specifier: ^2.0.6
+        specifier: ^2.0.22
         version: 2.0.22(typescript@5.5.2)
 
 packages:
@@ -755,8 +755,8 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
-  caniuse-lite@1.0.30001636:
-    resolution: {integrity: sha512-bMg2vmr8XBsbL6Lr0UHXy/21m84FTxDLWn2FSqMd5PrlbMxwJlQnC2YWYxVgp66PZE+BBNF2jYQUBKCo1FDeZg==}
+  caniuse-lite@1.0.30001695:
+    resolution: {integrity: sha512-vHyLade6wTgI2u1ec3WQBxv+2BrTERV28UXQu9LO6lZ9pYeMk34vjXFLOxo1A4UBA8XTL4njRQZdno/yYaSmWw==}
 
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
@@ -2520,7 +2520,7 @@ snapshots:
   autoprefixer@10.4.19(postcss@8.4.38):
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001636
+      caniuse-lite: 1.0.30001695
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.1
@@ -2567,7 +2567,7 @@ snapshots:
 
   browserslist@4.23.1:
     dependencies:
-      caniuse-lite: 1.0.30001636
+      caniuse-lite: 1.0.30001695
       electron-to-chromium: 1.4.810
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.1)
@@ -2583,7 +2583,7 @@ snapshots:
 
   camelcase-css@2.0.1: {}
 
-  caniuse-lite@1.0.30001636: {}
+  caniuse-lite@1.0.30001695: {}
 
   chalk@4.1.2:
     dependencies:

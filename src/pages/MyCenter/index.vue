@@ -22,8 +22,8 @@ const onClickLeft = () => history.back()
 <style scoped>
 .img-box {
   height: 100px;
-  background: url(/vite123.svg);
-  background: url('@/assets/redgirl.png') no-repeat center/cover;
+  background: url(/vite.svg);
+  /* background: url('@/assets/redgirl.png') no-repeat center/cover; */
 }
 img {
   height: 200px;
