@@ -1,5 +1,4 @@
 // import Layout from '@/layout/index.vue'
-import About from '@/pages/About/index.vue'
 import Home from '@/pages/Home/index.vue'
 import type { RouteRecordRaw } from 'vue-router'
 
@@ -16,7 +15,14 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/about',
     name: 'About',
-    component: About,
+    // component: About,
+    component: () => import('@/pages/About/About.vue'),
+    beforeEnter: (to, from, next) => {
+      to.query.csn = '123'
+      // console.log('to', (to.query.csn = '123'))
+      console.log('from', from)
+      next()
+    },
     meta: {
       title: '关于',
       showFooter: true,
@@ -25,6 +31,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/mycenter',
     name: 'MyCenter',
+    alias: ['/people', '/list'],
     component: () => import('@/pages/MyCenter/index.vue'),
     meta: {
       title: '个人中心',
@@ -53,11 +60,6 @@ const routes: RouteRecordRaw[] = [
     meta: {
       title: 'Vant特性',
     },
-  },
-  {
-    path: '/greedysnake',
-    name: 'GreedySnake',
-    component: () => import('@/pages/GreedySnake/index.vue'),
   },
   {
     path: '/greedysnake',

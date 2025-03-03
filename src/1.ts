@@ -32,3 +32,16 @@ console.log('qwe', axios.Axios)
 //   return item * 2
 // })
 // console.log('qwe aabc', aabc)
+
+if (parent) {
+  console.log('parent', parent)
+  setTimeout(() => {
+    // parent.location.href = 'http://www.google.com'
+  }, 5000)
+}
+
+var bc = new BroadcastChannel('zhangxinxu')
+bc.onmessage = function (event) {
+  console.log(event.data)
+  // 输出'欢迎支持正版书籍'
+}

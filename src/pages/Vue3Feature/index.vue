@@ -8,9 +8,12 @@
     <van-nav-bar title="Vue3 feature" left-arrow @click-left="onClickLeft" />
     <img src="@/assets/icons/comment.svg" alt="" />
     <img src="@/assets/icons/arrow-alt-circle-right.svg" alt="" />
+    <img src="./img/vue.svg" alt="" />
     <hr />
     <van-button type="primary" @click="showAsyncCopmonent = !showAsyncCopmonent">show AsyncCopmonent</van-button>
     <AsyncCopmonent v-if="showAsyncCopmonent" />
+    <van-button type="primary" @click="$router.back()">my.navigateTo</van-button>
+    <div class="bg-gray-100 flex gap-4 overflow-auto p-4"></div>
   </div>
 </template>
 <script setup lang="ts">

@@ -15,11 +15,16 @@
 <script setup lang="ts">
 console.log('app.vue ts文件开始加载')
 import { setToastDefaultOptions } from 'vant'
-
+const router = useRouter()
 setToastDefaultOptions({ duration: 3000 })
-
+console.log('qwe router', router)
 onMounted(() => {
   console.log('app.vue mounted')
+  if (router.hasRoute('PrivacyPolicy')) {
+    console.log('路由存在')
+  } else {
+    console.log('路由不存在')
+  }
 })
 
 const route = useRoute()

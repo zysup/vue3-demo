@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { loadScript } from '@/utils/index.ts'
+import { loadScript } from '@/utils/index'
 
 const onClickLeft = () => history.back()
 loadScript('https://appx/web-view.min.js', 5000, () => {

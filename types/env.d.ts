@@ -19,3 +19,8 @@ declare module '*.vue' {
   const componentOptions: ComponentOptions
   export default componentOptions
 }
+
+declare module 'webpack-bundle-analyzer' {
+  const BundleAnalyzerPlugin: any
+  export { BundleAnalyzerPlugin }
+}
