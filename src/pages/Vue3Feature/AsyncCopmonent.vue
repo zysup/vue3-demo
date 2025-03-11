@@ -17,9 +17,9 @@
 
 <script setup lang="ts">
 console.log('qwe AsyncCopmonent')
-import arrayMap from 'array-map-abc'
-const bbb = arrayMap([1, 2, 3], (item) => item * 2)
-console.log('bbb', bbb)
+// import { arrayMap } from 'array-map-abc'
+// const bbb = arrayMap([1, 2, 3], (item: number) => item * 2)
+// console.log('bbb', bbb)
 
 const imgs = [{ src: 'w_1.png' }, { src: 'w_2.png' }]
 function abc(n: string) {
