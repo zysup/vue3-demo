@@ -12,6 +12,7 @@
     <van-cell title="WebViewPage" is-link to="/webviewpage" />
     <van-cell title="Swiper" is-link to="/swiper" />
   </van-cell-group>
+  <!-- <img src="@/assets/big.jpg" alt="" /> -->
 </template>
 
 <style scoped lang="scss"></style>
