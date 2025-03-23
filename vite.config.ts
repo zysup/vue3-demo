@@ -71,6 +71,10 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          product: path.resolve(__dirname, 'product.html'),
+        },
         output: {
           // 入口文件名称
           entryFileNames: 'assets/js/[name]-[hash].js',
@@ -93,10 +97,11 @@ export default defineConfig(({ mode }) => {
             if (id.includes('node_modules')) {
               return 'vendor'
             }
-            if (id.includes('/index.')) {
-              return id.split('/').at(-2)
-            }
+            // if (id.includes('/index.')) {
+            //   return id.split('/').at(-2)
+            // }
           },
+          // manualChunks: undefined, // 禁用手动分块
         },
       },
     },

@@ -45,3 +45,7 @@ bc.onmessage = function (event) {
   console.log(event.data)
   // 输出'欢迎支持正版书籍'
 }
+;(async () => {
+  const { default: sdk } = await import('../public/initSdk.ts')
+  console.log('qwe sdk', sdk)
+})()
