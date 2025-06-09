@@ -43,9 +43,9 @@ window.addEventListener('resize', () =>
 const mode = getComputedStyle(document.documentElement).getPropertyValue('--theme').trim()
 document.body.classList.add(mode)
 
-const _error = console.error
+const originalConsoleError = console.error
 console.error = function (...args) {
-  return _error('Error=> ' + args[0], ...args.slice(1))
+  return originalConsoleError('Error=> ' + args[0], ...args.slice(1))
 }
 
 app.mount('#app')
