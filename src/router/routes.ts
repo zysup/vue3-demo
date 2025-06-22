@@ -91,6 +91,11 @@ const routes: RouteRecordRaw[] = [
     name: 'Swiper',
     component: () => import('@/pages/Swiper/Swiper.vue'),
   },
+  {
+    path: '/pinia',
+    name: 'Pinia',
+    component: () => import('@/pages/Pinia/index.vue'),
+  },
 ]
 
 export default routes

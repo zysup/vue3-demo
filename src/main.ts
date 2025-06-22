@@ -8,6 +8,7 @@ import router from '@/router'
 import 'vant/lib/index.css'
 import './styles/index.scss'
 import './codetest/index.ts'
+import { createPinia } from 'pinia'
 import App from './App.vue'
 const app = createApp(App)
 
@@ -48,4 +49,5 @@ console.error = function (...args) {
   return originalConsoleError('Error=> ' + args[0], ...args.slice(1))
 }
 
+app.use(createPinia())
 app.mount('#app')

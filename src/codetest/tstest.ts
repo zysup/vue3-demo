@@ -203,19 +203,21 @@ class ConsoleLogger implements Logger {
 
 // 35. 与 JS 类互操作
 // 假设有如下 JS 类（可在 JS 文件中定义）
-// class JSPoint {
-//   constructor(x, y) {
-//     this.x = x
-//     this.y = y
-//   }
-//   move(dx, dy) {
-//     this.x += dx
-//     this.y += dy
-//   }
-// }
+class JSPoint1 {
+  x: number
+  y: number
+  constructor(x: number, y: number) {
+    this.x = x
+    this.y = y
+  }
+  move(dx: number, dy: number) {
+    this.x += dx
+    this.y += dy
+  }
+}
 // TypeScript 中使用 JSPoint
 // @ts-ignore
-const jsPoint = new (window as any).JSPoint(1, 2)
+const jsPoint = new JSPoint1(1, 2)
 jsPoint.move(3, 4)
 console.log(jsPoint.x, jsPoint.y)
 
@@ -227,8 +229,8 @@ declare class JSPoint {
   move(dx: number, dy: number): void
 }
 // 现在可以获得类型提示
-const point2 = new JSPoint(5, 6)
-point2.move(1, 1)
+// const point2 = new JSPoint(5, 6)
+// point2.move(1, 1)
 
 // 37. 混合使用 TS/JS 类
 // TypeScript 类继承 JS 类

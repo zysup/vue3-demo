@@ -11,6 +11,7 @@
     <van-cell title="WakeLock" is-link to="/wakelock" />
     <van-cell title="WebViewPage" is-link to="/webviewpage" />
     <van-cell title="Swiper" is-link to="/swiper" />
+    <van-cell title="Pinia" is-link to="/pinia" />
   </van-cell-group>
   <!-- <img src="@/assets/big.jpg" alt="" /> -->
 </template>
