@@ -7,7 +7,7 @@ import { createApp } from 'vue'
 import router from '@/router'
 import 'vant/lib/index.css'
 import './styles/index.scss'
-import './1.ts'
+import './codetest/index.ts'
 import App from './App.vue'
 const app = createApp(App)
 

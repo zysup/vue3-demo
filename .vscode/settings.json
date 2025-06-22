@@ -57,5 +57,6 @@
         "label": "other"
       }
     ]
-  }
+  },
+  "terminal.integrated.suggest.enabled": true
 }

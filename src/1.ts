@@ -1,7 +1,3 @@
-/* @vite-ignore */
-// console.log('qwe', new URL('data.txt', import.meta.url))
-// console.log(qwe)
-//@ts-nocheck
 type Aaa = {
   bbb: number
   ccc?: number
@@ -34,17 +30,11 @@ console.log('qwe', axios.Axios)
 // })
 // console.log('qwe aabc', aabc)
 
-// if (parent) {
-//   console.log('parent', parent)
-//   setTimeout(() => {
-//     parent.location.href = 'http://www.google.com'
-//   }, 5000)
-// }
-
-var bc = new BroadcastChannel('zhangxinxu')
-bc.onmessage = function (event) {
-  console.log(event.data)
-  // 输出'欢迎支持正版书籍'
+if (parent) {
+  console.log('parent', parent)
+  setTimeout(() => {
+    parent.location.href = 'http://www.google.com'
+  }, 5000)
 }
 ;(async () => {
   const { default: sdk } = await import('../public/initSdk.ts')
@@ -70,29 +60,31 @@ let d: Color = Color.Blue
 //   width?: number
 // }
 
-// let a: number[] = [1, 2, 3, 4]
-// let ro: ReadonlyArray<number> = a
-
-class Animal {
-  name: string
-  constructor() {
-    this.name = 'Animal'
-  }
-}
-class Dog extends Animal {
-  breed: string
-  constructor(name: string, breed: string) {
-    super()
-    this.name = name
-    this.breed = breed
-  }
-}
+let a: number[] = [1, 2, 3, 4]
+let ro: ReadonlyArray<number> = a
+ro[0] = 12 // error: Index signature in type 'ReadonlyArray<number>' only permits reading
+// a = ro // error: Cannot assign to 'a' because it is a constant or a read-only property
+// a = ro as number[] // 可以通过类型断言绕过错误
+// class Animal {
+//   name: string
+//   constructor() {
+//     this.name = 'Animal'
+//   }
+// }
+// class Dog extends Animal {
+//   breed: string
+//   constructor(name: string, breed: string) {
+//     super()
+//     this.name = name
+//     this.breed = breed
+//   }
+// }
 
 // 错误：使用数值型的字符串索引，有时会得到完全不同的Animal!
-interface NotOkay {
-  [x: string]: Animal
-  [x: number]: Dog
-}
+// interface NotOkay {
+//   [x: string]: Animal
+//   [x: number]: Dog
+// }
 interface NotOkay2 {
   [x: string]: string | number
   [x: number]: string
@@ -109,8 +101,8 @@ interface Bird {
 }
 
 interface Fish {
-  swim()
-  layEggs()
+  swim(): any
+  layEggs(): any
 }
 
 function getSmallPet(): Fish & Bird {
@@ -181,8 +173,47 @@ const record: RecordExample = {
   c: 3,
 }
 
-/** @type {number} */
-var x
+;(function () {
+  /**
+   * 以 abstract 开头的类是抽象类，不能用于创建对象，只能被继承
+   * 抽象类中可以添加抽象方法
+   */
+  abstract class Animal {
+    name: string
+    constructor(
+      name: any,
+      public gender = '男',
+    ) {
+      this.name = name
+    }
+    sayHello() {
+      console.log(`${this.name}动物在叫`)
+    }
+    /**
+     * 定义一个抽象方法
+     * 抽象方法以 abstrack 开头，没有方法体
+     * 抽象方法只能定义在抽象类中，并且子类必须对抽象方法进行重写
+     */
+    // abstract sayHello123(a: number): void
+  }
 
-x = 0 // OK
-x = false // Error: boolean is not assignable to number
+  class Dog extends Animal {
+    age: number
+    constructor(name: string, age: number) {
+      super(name, '女')
+      this.age = age
+    }
+    sayHello2() {
+      super.sayHello()
+      // console.log('动物在叫');
+      // console.log('汪汪汪');
+    }
+  }
+  class Car {}
+  class Bird extends Car {}
+  const bird = new Bird()
+  const dog = new Dog('旺财', 199)
+  dog.sayHello2()
+  console.log('qwe dog', dog, Object.getPrototypeOf(dog), Dog.prototype, dog.constructor)
+  console.log('qwe bird', bird, Object.getPrototypeOf(bird), Bird.prototype)
+})()
