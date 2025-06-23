@@ -21,6 +21,7 @@
     "array-map-abc": "github:zysup/arraymapabc",
     "axios": "^1.7.2",
     "hellojs": "2.0.0-4",
+    "mitt": "^3.0.1",
     "nprogress": "^0.2.0",
     "pinia": "^3.0.3",
     "swiper": "^11.2.1",

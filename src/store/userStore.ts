@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 export const useUserStore = defineStore('user', {
   state: () => ({
     id: '',
-    name: 'zhansan',
+    name: 'zhansan89',
     age: 18,
     token: '',
     isLogin: false,
@@ -14,6 +14,10 @@ export const useUserStore = defineStore('user', {
     },
     isAdult(state) {
       return state.age >= 18
+    },
+    // 返回类型必须明确设置
+    doubleAge(): number {
+      return this.age * 2
     },
   },
   actions: {

@@ -12,8 +12,8 @@
   </div>
 </template>
 <script setup lang="ts">
-import { useUserStore } from '@/store/userStore'
-import { useCarStore } from '@/store/useCarStore'
+import { useUserStore, useCarStore } from '@/store'
+// import { useCarStore } from '@/store/useCarStore'
 
 import A from './A.vue'
 
@@ -31,6 +31,14 @@ const clearStore = () => {
   console.log('清空 Pinia store')
   // userStore.$reset()
   userStore.$state = { id: '', name: 'zhansan123', age: 138, token: '', isLogin: false }
-  carStore.$state = { cars: [], selectedCarId: '' }
 }
+
+watch(
+  userStore.$state,
+  (state) => {
+    // 每当它发生变化时，将整个状态持久化到本地存储
+    localStorage.setItem('piniaState', JSON.stringify(state))
+  },
+  { deep: true },
+)
 </script>

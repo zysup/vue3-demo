@@ -96,6 +96,14 @@ const routes: RouteRecordRaw[] = [
     name: 'Pinia',
     component: () => import('@/pages/Pinia/index.vue'),
   },
+  {
+    path: '/mittdemo',
+    name: 'MittDemo',
+    component: () => import('@/pages/MittDemo/index.vue'),
+    meta: {
+      title: 'mitt事件通信',
+    },
+  },
 ]
 
 export default routes

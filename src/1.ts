@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 type Aaa = {
   bbb: number
   ccc?: number

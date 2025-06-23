@@ -49,5 +49,15 @@ console.error = function (...args) {
   return originalConsoleError('Error=> ' + args[0], ...args.slice(1))
 }
 
-app.use(createPinia())
+// 为安装此插件后创建的每个store添加一个名为 `secret` 的属性
+// 这可能在不同的文件中
+function SecretPiniaPlugin() {
+  return { secret: 'the cake is a lie' }
+}
+const pinia = createPinia()
+// 将插件提供给 pinia
+pinia.use(SecretPiniaPlugin)
+pinia.use(() => ({ hello: 'world' }))
+app.use(pinia)
+
 app.mount('#app')

@@ -12,6 +12,7 @@
     <van-cell title="WebViewPage" is-link to="/webviewpage" />
     <van-cell title="Swiper" is-link to="/swiper" />
     <van-cell title="Pinia" is-link to="/pinia" />
+    <van-cell title="MittDemo" is-link to="/mittdemo" />
   </van-cell-group>
   <!-- <img src="@/assets/big.jpg" alt="" /> -->
 </template>

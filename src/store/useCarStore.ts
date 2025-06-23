@@ -11,7 +11,7 @@ type Car = {
 export const useCarStore = defineStore('car', {
   state: () => ({
     cars: [] as Car[],
-    selectedCarId: '' as string,
+    selectedCarId: 'aodi123' as string,
   }),
   getters: {
     carCount(state) {

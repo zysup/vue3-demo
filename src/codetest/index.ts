@@ -3,4 +3,4 @@
   console.log('qwe sdk', sdk)
 })()
 
-import './tstest.ts'
+// import './tstest.ts'
